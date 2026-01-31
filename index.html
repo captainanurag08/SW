@@ -8,27 +8,51 @@
 </head>
 <body>
 
-<!-- MOBILE NAVBAR -->
+<!-- NAVBAR -->
 <header class="navbar">
-    <div class="logo">Science Wallah</div>
-    <div class="menu">☰</div>
+    <div class="brand">
+        <img src="images/logo.png" alt="Logo">
+        <span>Science Wallah</span>
+    </div>
+    <div class="menu" onclick="openMenu()">☰</div>
 </header>
 
-<!-- HERO -->
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <div class="menu-header">
+        <span>Menu</span>
+        <span class="close" onclick="closeMenu()">✕</span>
+    </div>
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Academics</a>
+    <a href="#">Admissions</a>
+    <a href="#">Contact</a>
+</div>
+
+<!-- MOVING BANNER (PW STYLE) -->
+<section class="banner">
+    <div class="slider" id="slider">
+        <img src="images/banner1.png">
+        <img src="images/banner2.png">
+        <img src="images/banner3.png">
+    </div>
+</section>
+
+<!-- HERO TEXT -->
 <section class="hero">
     <h1>Strong Concepts. Clear Learning.</h1>
     <p>
         A structured academic platform focused on clarity,
-        consistency, and discipline.
+        discipline, and consistency.
     </p>
-    <img src="images/banner.png" alt="Learning">
 </section>
 
-<!-- TRUST STRIP -->
+<!-- TRUST -->
 <section class="trust">
     <div>
         <h2>12+</h2>
-        <p>Years Experience</p>
+        <p>Years</p>
     </div>
     <div>
         <h2>1L+</h2>
@@ -36,58 +60,61 @@
     </div>
     <div>
         <h2>95%</h2>
-        <p>Success Rate</p>
+        <p>Results</p>
     </div>
 </section>
 
-<!-- FEATURES -->
+<!-- WHY US -->
 <section class="section">
     <h2>Why Science Wallah</h2>
 
     <div class="card">
         <h3>Expert Teachers</h3>
-        <p>Experienced educators with strong subject command.</p>
+        <p>Highly experienced faculty with strong fundamentals.</p>
     </div>
 
     <div class="card">
-        <h3>Concept-Driven Learning</h3>
-        <p>Focus on understanding, not rote memorization.</p>
+        <h3>Concept-First Approach</h3>
+        <p>Focus on understanding, not memorization.</p>
     </div>
 
     <div class="card">
         <h3>Academic Discipline</h3>
-        <p>Structured study routines and regular assessment.</p>
+        <p>Structured routines that build consistency.</p>
     </div>
 </section>
 
-<!-- ABOUT -->
+<!-- PRINCIPAL -->
 <section class="about">
-    <img src="images/principal.jpg" alt="Principal">
+    <img src="images/principal.jpg">
     <h2>Message from the Principal</h2>
     <p>
-        Our goal is to guide students with clarity, discipline,
-        and confidence so they build a strong academic foundation.
+        Our aim is to guide students with clarity, discipline,
+        and confidence toward excellence.
     </p>
 </section>
 
-<!-- STUDENT LIFE -->
-<section class="section light">
-    <h2>Student Learning Environment</h2>
-
-    <div class="card">
-        <p>
-            A calm and focused environment that supports learning,
-            curiosity, and consistent academic growth.
-        </p>
-    </div>
-
-    <img src="images/campus.png" alt="Campus">
-</section>
-
-<!-- FOOTER -->
 <footer>
     <p>© 2026 Science Wallah</p>
 </footer>
+
+<!-- JS -->
+<script>
+function openMenu() {
+    document.getElementById("mobileMenu").classList.add("active");
+}
+function closeMenu() {
+    document.getElementById("mobileMenu").classList.remove("active");
+}
+
+/* Auto slider */
+let index = 0;
+const slider = document.getElementById("slider");
+setInterval(() => {
+    index = (index + 1) % 3;
+    slider.style.transform = `translateX(-${index * 100}%)`;
+}, 3000);
+</script>
 
 </body>
 </html>

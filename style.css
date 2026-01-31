@@ -15,42 +15,99 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 14px 18px;
+    padding: 14px 16px;
     background: #ffffff;
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
-.logo {
-    font-size: 18px;
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     font-weight: 700;
+    font-size: 17px;
     color: #4b4eed;
+}
+
+.brand img {
+    width: 28px;
+    height: 28px;
 }
 
 .menu {
     font-size: 22px;
+    cursor: pointer;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 75%;
+    height: 100%;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: -4px 0 12px rgba(0,0,0,0.15);
+    transition: right 0.3s ease;
+    z-index: 200;
+}
+
+.mobile-menu.active {
+    right: 0;
+}
+
+.menu-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.mobile-menu a {
+    display: block;
+    padding: 14px 0;
+    font-size: 16px;
+    text-decoration: none;
+    color: #222;
+    border-bottom: 1px solid #eee;
+}
+
+/* BANNER */
+.banner {
+    overflow: hidden;
+    padding: 12px;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.4s ease;
+}
+
+.slider img {
+    width: 100%;
+    flex-shrink: 0;
+    border-radius: 14px;
+    height: 160px;
+    object-fit: cover;
 }
 
 /* HERO */
 .hero {
-    padding: 28px 18px;
+    padding: 20px 18px;
 }
 
 .hero h1 {
-    font-size: 26px;
-    line-height: 1.3;
+    font-size: 24px;
 }
 
 .hero p {
-    margin: 14px 0 20px;
+    margin-top: 10px;
+    font-size: 14px;
     color: #555;
-    font-size: 15px;
-}
-
-.hero img {
-    width: 100%;
-    border-radius: 14px;
 }
 
 /* TRUST */
@@ -58,78 +115,71 @@ body {
     display: flex;
     justify-content: space-around;
     background: #ffffff;
-    padding: 20px 0;
+    padding: 16px 0;
     text-align: center;
 }
 
 .trust h2 {
-    font-size: 22px;
+    font-size: 20px;
     color: #4b4eed;
 }
 
 .trust p {
     font-size: 12px;
-    color: #666;
 }
 
 /* SECTIONS */
 .section {
-    padding: 30px 18px;
+    padding: 28px 18px;
 }
 
 .section h2 {
-    font-size: 20px;
-    margin-bottom: 18px;
-}
-
-.light {
-    background: #ffffff;
+    font-size: 18px;
+    margin-bottom: 16px;
 }
 
 /* CARDS */
 .card {
     background: #ffffff;
-    padding: 18px;
+    padding: 16px;
     border-radius: 14px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 .card h3 {
-    font-size: 16px;
-    margin-bottom: 6px;
+    font-size: 15px;
 }
 
 .card p {
-    font-size: 14px;
+    font-size: 13px;
     color: #555;
 }
 
 /* ABOUT */
 .about {
-    padding: 30px 18px;
+    padding: 26px 18px;
     background: #eef1ff;
 }
 
 .about img {
     width: 100%;
     border-radius: 14px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 .about h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
+    font-size: 18px;
 }
 
 .about p {
-    font-size: 14px;
+    font-size: 13px;
     color: #444;
 }
 
 /* FOOTER */
 footer {
+    padding: 14px;
     text-align: center;
-    padding: 16px;
-    font-size: 13px;
+    font-size: 12px;
     background: #ffffff;
 }
