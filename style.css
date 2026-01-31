@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #4b4eed;
+}
+
+nav a {
+    margin: 0 12px;
+    text-decoration: none;
+    color: #333;
+}
+
+.login-btn {
+    padding: 8px 16px;
+    background: #4b4eed;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* HERO */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: linear-gradient(120deg, #eef1ff, #ffffff);
+}
+
+.hero-text {
+    max-width: 500px;
+}
+
+.hero-text h1 {
+    font-size: 36px;
+    color: #222;
+}
+
+.hero-text p {
+    margin: 15px 0;
+    color: #555;
+}
+
+.hero-text button {
+    padding: 10px 20px;
+    background: #4b4eed;
+    color: white;
+    border: none;
+    border-radius: 6px;
+}
+
+/* FEATURES */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px;
+    background: white;
+}
+
+.feature-box {
+    width: 250px;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f1f3ff;
+    text-align: center;
+}
+
+/* ABOUT */
+.about {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+}
+
+.about img {
+    width: 250px;
+    border-radius: 12px;
+    margin-right: 30px;
+}
+
+/* FOOTER */
+footer {
+    background: #4b4eed;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
